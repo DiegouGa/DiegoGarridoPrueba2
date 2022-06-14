@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Prueba2.Models.Producto>
+@{
+    ViewBag.Title = "Index";
+    var Datoss = ViewBag.Datos;
+}
+
+<h2>Index</h2>
+<table class="table">
+    <tr>
+        <th>
+            Promedio de Productos por Categoría
+        </th>
+    </tr>
+
+    @foreach (var item in Datoss)
+    {
+        <tr>
+            <td>
+                @item
+            </td>
+        </tr>
+    }
+
+</table>
+

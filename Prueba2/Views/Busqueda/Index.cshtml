@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Prueba2.Models.Categoria>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Busqueda</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.ActionLink("Buscar", "index", new { id = item.idCategoria }) |
+
+            </td>
+        </tr> }
+
+</table>
+
+
